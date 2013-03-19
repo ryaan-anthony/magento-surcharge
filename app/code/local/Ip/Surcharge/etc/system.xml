@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<config>
+	<sections>
+         <ip_section>
+            <groups>
+                <ip_surcharge translate="label comment" module="surcharge">
+                    <label>Surcharge Options</label>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+					<fields>
+                        <ip_surcharge_enabled translate="label">
+                            <label>Enable Surcharges?</label>
+                            <frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </ip_surcharge_enabled>
+                        <ip_surcharge_label translate="label">
+                            <label>Label</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Label displayed in totals.</comment>
+                        </ip_surcharge_label>
+                        <ip_surcharge_amt translate="label">
+                            <label>Flat Surcharge</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </ip_surcharge_amt>
+                        <ip_surcharge_freeship translate="label">
+                            <label>Apply with Free Shipping?</label>
+                            <frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<comment>Flat surcharge skipped if freeshipping is selected.</comment>
+                        </ip_surcharge_freeship>
+                        <ip_surcharge_method translate="label">
+                            <label>Payment Methods</label>
+                            <frontend_type>multiselect</frontend_type>
+							<source_model>Ip_Surcharge_Model_Resource_Methods</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>A flat surcharge is applied when customer uses the above payment methods.</comment>
+                        </ip_surcharge_method>
+                        <ip_surcharge_attribute translate="label">
+                            <label>Product Attribute</label>
+                            <frontend_type>multiselect</frontend_type>
+							<source_model>Ip_Surcharge_Model_Resource_Attributes</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Additional surcharges can be set using the above product attributes.</comment>
+                        </ip_surcharge_attribute>
+                        <ip_surcharge_additional translate="label">
+                            <label>Apply attribute surcharge to all payment methods?</label>
+                            <frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </ip_surcharge_additional>
+                    </fields>
+                </ip_surcharge>
+            </groups>
+        </ip_section>
+    </sections>
+</config>
