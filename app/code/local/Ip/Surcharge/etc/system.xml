@@ -1,7 +1,20 @@
 <?xml version="1.0"?>
 <config>
+	<tabs>
+        <ip_tab translate="label" module="global">
+            <label>Inverse Paradox</label>
+            <sort_order>250</sort_order>
+        </ip_tab>
+    </tabs>
 	<sections>
-         <ip_section>
+         <ip_section translate="label" module="surcharge">
+         	<label>Custom Options</label>
+			<tab>ip_tab</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>99999</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
             <groups>
                 <ip_surcharge translate="label comment" module="surcharge">
                     <label>Surcharge Options</label>
