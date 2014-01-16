@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <config>
 	<tabs>
-        <ip_tab translate="label" module="global">
+        <ip_tab translate="label">
             <label>Inverse Paradox</label>
             <sort_order>250</sort_order>
         </ip_tab>
