@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Ryaan_Surcharge>
-            <version>0.1.0</version>
+            <version>1.0.0</version>
         </Ryaan_Surcharge>
     </modules>
     <global>
@@ -10,16 +10,39 @@
 			<surcharge>
 				<class>Ryaan_Surcharge_Helper</class>
 			</surcharge>
-		</helpers> 
+		</helpers>
+		<models>
+			<surcharge>
+				<class>Ryaan_Surcharge_Model</class>
+			</surcharge>
+		</models>
 		<sales>
             <quote>
                 <totals>
                     <surcharge>
-                        <class>Ryaan_Surcharge_Model_Total_Quote</class>
+                        <class>surcharge/total_quote</class>
                     </surcharge>
                 </totals>
             </quote>
-        </sales> 
+        </sales>
+        <resources>
+            <surcharge_setup>
+                <setup>
+                    <module>Ryaan_Surcharge</module>
+                    <class>Mage_Core_Model_Resource_Setup</class>
+                </setup>
+            </surcharge_setup>
+        </resources>
+        <fieldsets>
+            <sales_convert_quote_address>
+                <surcharge>
+                    <to_order>*</to_order>
+                </surcharge>
+                <base_surcharge>
+                    <to_order>*</to_order>
+                </base_surcharge>
+            </sales_convert_quote_address>
+        </fieldsets>
     </global>
 	 <default>
         <sales>

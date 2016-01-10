@@ -2,7 +2,6 @@
 
 class Ryaan_Surcharge_Model_Total_Quote extends Mage_Sales_Model_Quote_Address_Total_Abstract
 {
-
     /**
      * @var Ryaan_Surcharge_Helper_Quote
      */
@@ -51,11 +50,14 @@ class Ryaan_Surcharge_Model_Total_Quote extends Mage_Sales_Model_Quote_Address_T
             return $this;
         }
 
-        $surcharge = $this->helper->getSurcharge($address->getQuote());
+        $baseSurcharge = $this->helper->getSurcharge($address->getQuote());
 
-		if($surcharge){
-			$this->_addAmount(Mage::app()->getStore()->convertPrice($surcharge));
-			$this->_addBaseAmount($surcharge);
+		if($baseSurcharge){
+            $surcharge = Mage::app()->getStore()->convertPrice($baseSurcharge);
+            $address->setSurcharge($surcharge);
+            $address->setBaseSurcharge($baseSurcharge);
+			$this->_addAmount($surcharge);
+			$this->_addBaseAmount($baseSurcharge);
 		}
 
         return $this;
