@@ -1,32 +1,34 @@
 <?xml version="1.0"?>
 <layout version="0.1.0">
-    <sales_order_view>
+
+    <!-- Order -->
+    <surcharge_add_order_total>
         <reference name="order_totals">
             <block type="surcharge/total_order" name="total_surcharge" />
         </reference>
+    </surcharge_add_order_total>
+    <sales_order_view>
+        <update handle="surcharge_add_order_total" />
     </sales_order_view>
     <sales_order_print>
-        <reference name="order_totals">
-            <block type="surcharge/total_order" name="total_surcharge" />
-        </reference>
+        <update handle="surcharge_add_order_total" />
     </sales_order_print>
 
-
-    <!--<surcharge_add_invoice_total>
+    <!-- Invoice -->
+    <surcharge_add_invoice_total>
         <reference name="invoice_totals">
             <block type="surcharge/total_order" name="total_surcharge" />
         </reference>
     </surcharge_add_invoice_total>
-
     <sales_order_invoice>
         <update handle="surcharge_add_invoice_total" />
     </sales_order_invoice>
     <sales_order_printinvoice>
         <update handle="surcharge_add_invoice_total" />
-    </sales_order_printinvoice>-->
+    </sales_order_printinvoice>
 
-
-    <!--<surcharge_add_creditmemo_total>
+    <!-- Creditmemo -->
+    <surcharge_add_creditmemo_total>
         <reference name="creditmemo_totals">
             <block type="surcharge/total_order" name="total_surcharge" />
         </reference>
@@ -38,6 +40,7 @@
         <update handle="surcharge_add_creditmemo_total" />
     </sales_order_printcreditmemo>
 
+    <!-- Emails -->
     <sales_email_order_items>
         <update handle="surcharge_add_order_total" />
     </sales_email_order_items>
@@ -47,6 +50,8 @@
     <sales_email_order_creditmemo_items>
         <update handle="surcharge_add_creditmemo_total" />
     </sales_email_order_creditmemo_items>
+
+    <!-- Guest -->
     <sales_guest_view>
         <update handle="surcharge_add_order_total" />
     </sales_guest_view>
@@ -64,5 +69,6 @@
     </sales_guest_printinvoice>
     <sales_guest_printcreditmemo>
         <update handle="surcharge_add_creditmemo_total" />
-    </sales_guest_printcreditmemo>-->
+    </sales_guest_printcreditmemo>
+
 </layout>

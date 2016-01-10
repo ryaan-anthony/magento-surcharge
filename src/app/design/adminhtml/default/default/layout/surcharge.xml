@@ -1,28 +1,19 @@
 <?xml version="1.0"?>
 <layout version="0.1.0">
 
+    <!-- Order -->
     <adminhtml_sales_order_view>
         <reference name="order_totals">
             <block type="surcharge/total_order" name="total_surcharge" />
         </reference>
     </adminhtml_sales_order_view>
 
-
-    <!--<surcharge_add_order_total>
-        <reference name="order_totals">
-            <block type="surcharge/total_order" name="total_surcharge" />
-        </reference>
-    </surcharge_add_order_total>
+    <!-- Invoice -->
     <surcharge_add_invoice_total>
         <reference name="invoice_totals">
             <block type="surcharge/total_order" name="total_surcharge" />
         </reference>
     </surcharge_add_invoice_total>
-    <surcharge_add_creditmemo_total>
-        <reference name="creditmemo_totals">
-            <block type="surcharge/total_order" name="total_surcharge" />
-        </reference>
-    </surcharge_add_creditmemo_total>
     <adminhtml_sales_order_invoice_new>
         <update handle="surcharge_add_invoice_total" />
     </adminhtml_sales_order_invoice_new>
@@ -32,6 +23,13 @@
     <adminhtml_sales_order_invoice_view>
         <update handle="surcharge_add_invoice_total" />
     </adminhtml_sales_order_invoice_view>
+
+    <!-- Creditmemo -->
+    <surcharge_add_creditmemo_total>
+        <reference name="creditmemo_totals">
+            <block type="surcharge/total_order" name="total_surcharge" />
+        </reference>
+    </surcharge_add_creditmemo_total>
     <adminhtml_sales_order_creditmemo_new>
         <update handle="surcharge_add_creditmemo_total" />
     </adminhtml_sales_order_creditmemo_new>
@@ -40,5 +38,6 @@
     </adminhtml_sales_order_creditmemo_updateqty>
     <adminhtml_sales_order_creditmemo_view>
         <update handle="surcharge_add_creditmemo_total" />
-    </adminhtml_sales_order_creditmemo_view>-->
+    </adminhtml_sales_order_creditmemo_view>
+
 </layout>
