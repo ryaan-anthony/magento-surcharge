@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <sales_order_view>
+        <reference name="order_totals">
+            <block type="surcharge/total_order" name="total_surcharge" />
+        </reference>
+    </sales_order_view>
+    <sales_order_print>
+        <reference name="order_totals">
+            <block type="surcharge/total_order" name="total_surcharge" />
+        </reference>
+    </sales_order_print>
+
+
+    <!--<surcharge_add_invoice_total>
+        <reference name="invoice_totals">
+            <block type="surcharge/total_order" name="total_surcharge" />
+        </reference>
+    </surcharge_add_invoice_total>
+
+    <sales_order_invoice>
+        <update handle="surcharge_add_invoice_total" />
+    </sales_order_invoice>
+    <sales_order_printinvoice>
+        <update handle="surcharge_add_invoice_total" />
+    </sales_order_printinvoice>-->
+
+
+    <!--<surcharge_add_creditmemo_total>
+        <reference name="creditmemo_totals">
+            <block type="surcharge/total_order" name="total_surcharge" />
+        </reference>
+    </surcharge_add_creditmemo_total>
+    <sales_order_creditmemo>
+        <update handle="surcharge_add_creditmemo_total" />
+    </sales_order_creditmemo>
+    <sales_order_printcreditmemo>
+        <update handle="surcharge_add_creditmemo_total" />
+    </sales_order_printcreditmemo>
+
+    <sales_email_order_items>
+        <update handle="surcharge_add_order_total" />
+    </sales_email_order_items>
+    <sales_email_order_invoice_items>
+        <update handle="surcharge_add_invoice_total" />
+    </sales_email_order_invoice_items>
+    <sales_email_order_creditmemo_items>
+        <update handle="surcharge_add_creditmemo_total" />
+    </sales_email_order_creditmemo_items>
+    <sales_guest_view>
+        <update handle="surcharge_add_order_total" />
+    </sales_guest_view>
+    <sales_guest_invoice>
+        <update handle="surcharge_add_invoice_total" />
+    </sales_guest_invoice>
+    <sales_guest_creditmemo>
+        <update handle="surcharge_add_creditmemo_total" />
+    </sales_guest_creditmemo>
+    <sales_guest_print>
+        <update handle="surcharge_add_order_total" />
+    </sales_guest_print>
+    <sales_guest_printinvoice>
+        <update handle="surcharge_add_invoice_total" />
+    </sales_guest_printinvoice>
+    <sales_guest_printcreditmemo>
+        <update handle="surcharge_add_creditmemo_total" />
+    </sales_guest_printcreditmemo>-->
+</layout>

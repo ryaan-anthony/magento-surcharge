@@ -6,17 +6,22 @@
         </Ryaan_Surcharge>
     </modules>
     <global>
-		<helpers>
-			<surcharge>
-				<class>Ryaan_Surcharge_Helper</class>
-			</surcharge>
-		</helpers>
-		<models>
-			<surcharge>
-				<class>Ryaan_Surcharge_Model</class>
-			</surcharge>
-		</models>
-		<sales>
+        <helpers>
+            <surcharge>
+                <class>Ryaan_Surcharge_Helper</class>
+            </surcharge>
+        </helpers>
+        <blocks>
+            <surcharge>
+                <class>Ryaan_Surcharge_Block</class>
+            </surcharge>
+        </blocks>
+        <models>
+            <surcharge>
+                <class>Ryaan_Surcharge_Model</class>
+            </surcharge>
+        </models>
+        <sales>
             <quote>
                 <totals>
                     <surcharge>
@@ -24,6 +29,13 @@
                     </surcharge>
                 </totals>
             </quote>
+            <!-- <order_invoice>
+                 <totals>
+                     <surcharge>
+                         <class>surcharge/total_invoice</class>
+                     </surcharge>
+                 </totals>
+             </order_invoice>-->
         </sales>
         <resources>
             <surcharge_setup>
@@ -44,15 +56,33 @@
             </sales_convert_quote_address>
         </fieldsets>
     </global>
-	 <default>
+    <frontend>
+        <layout>
+            <updates>
+                <surcharge>
+                    <file>surcharge.xml</file>
+                </surcharge>
+            </updates>
+        </layout>
+    </frontend>
+    <adminhtml>
+        <layout>
+            <updates>
+                <surcharge>
+                    <file>surcharge.xml</file>
+                </surcharge>
+            </updates>
+        </layout>
+    </adminhtml>
+    <default>
         <sales>
             <totals_sort>
                 <surcharge>45</surcharge>
             </totals_sort>
-			<surcharge>
-				<amount>10</amount>
-				<label>Surcharge</label>
-			</surcharge>
-		</sales>
+            <surcharge>
+                <amount>10</amount>
+                <label>Surcharge</label>
+            </surcharge>
+        </sales>
     </default>
 </config>
