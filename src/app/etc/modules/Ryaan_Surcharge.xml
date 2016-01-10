@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-		<Ryaan_Surcharge>
-			<active>true</active>
-			<codePool>community</codePool>
-		</Ryaan_Surcharge>
+        <Ryaan_Surcharge>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Ryaan_Surcharge>
     </modules>
 </config>

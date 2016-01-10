@@ -4,14 +4,14 @@
     <!-- Order -->
     <adminhtml_sales_order_view>
         <reference name="order_totals">
-            <block type="surcharge/total_order" name="total_surcharge" />
+            <block type="surcharge/total" name="total_surcharge" />
         </reference>
     </adminhtml_sales_order_view>
 
     <!-- Invoice -->
     <surcharge_add_invoice_total>
         <reference name="invoice_totals">
-            <block type="surcharge/total_order" name="total_surcharge" />
+            <block type="surcharge/total" name="total_surcharge" />
         </reference>
     </surcharge_add_invoice_total>
     <adminhtml_sales_order_invoice_new>
@@ -27,7 +27,7 @@
     <!-- Creditmemo -->
     <surcharge_add_creditmemo_total>
         <reference name="creditmemo_totals">
-            <block type="surcharge/total_order" name="total_surcharge" />
+            <block type="surcharge/total" name="total_surcharge" />
         </reference>
     </surcharge_add_creditmemo_total>
     <adminhtml_sales_order_creditmemo_new>

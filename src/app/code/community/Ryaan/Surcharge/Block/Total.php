@@ -1,21 +1,7 @@
 <?php
 
-class Ryaan_Surcharge_Block_Total_Order extends Mage_Core_Block_Template
+class Ryaan_Surcharge_Block_Total extends Mage_Core_Block_Template
 {
-
-//    /** @var Varien_Object */
-//    protected $source;
-//
-//    /**
-//     * Get data (totals) source model
-//     *
-//     * @return Varien_Object
-//     */
-//    public function getSource()
-//    {
-//        return $this->source;
-//    }
-
     /**
      * Add this total to parent
      */
@@ -26,21 +12,16 @@ class Ryaan_Surcharge_Block_Total_Order extends Mage_Core_Block_Template
 
         $order = $parent->getOrder();
 
-        $this->source  = $parent->getSource();
-
         $surcharge = $order->getSurcharge();
 
         if ($surcharge > 0) {
-
-            $total = new Varien_Object(array(
+            $total = new Varien_Object([
                 'code' => 'surcharge',
                 'field' => 'surcharge',
                 'value' => $surcharge,
                 'label' => $this->__('Surcharge')
-            ));
-
+            ]);
             $parent->addTotalBefore($total, 'shipping');
-
         }
 
         return $this;

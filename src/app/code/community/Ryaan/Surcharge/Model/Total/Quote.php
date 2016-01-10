@@ -70,11 +70,11 @@ class Ryaan_Surcharge_Model_Total_Quote extends Mage_Sales_Model_Quote_Address_T
             $surcharge = $this->helper->getSurcharge($address->getQuote());
 
             if ($surcharge) {
-                $address->addTotal(array(
+                $address->addTotal([
                     'code'  => 'surcharge',
                     'title' => $this->helper->getLabel(),
                     'value' => $surcharge
-                ));
+                ]);
             }
         }
 
