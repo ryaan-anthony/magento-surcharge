@@ -19,7 +19,7 @@ class Ryaan_Surcharge_Block_Total extends Mage_Core_Block_Template
                 'code' => 'surcharge',
                 'field' => 'surcharge',
                 'value' => $surcharge,
-                'label' => $this->__('Surcharge')
+                'label' => Mage::helper('surcharge')->getLabel()
             ]);
             $parent->addTotalBefore($total, 'shipping');
         }
