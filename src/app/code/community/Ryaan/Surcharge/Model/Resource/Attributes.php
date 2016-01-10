@@ -1,5 +1,6 @@
 <?php
-class Ip_Surcharge_Model_Resource_Attributes
+
+class Ryaan_Surcharge_Model_Resource_Attributes
 {
 	public function toOptionArray()
 	{
