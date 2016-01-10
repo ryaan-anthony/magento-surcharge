@@ -29,13 +29,6 @@
                     </surcharge>
                 </totals>
             </quote>
-            <!-- <order_invoice>
-                 <totals>
-                     <surcharge>
-                         <class>surcharge/total_invoice</class>
-                     </surcharge>
-                 </totals>
-             </order_invoice>-->
         </sales>
         <resources>
             <surcharge_setup>
