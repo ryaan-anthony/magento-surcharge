@@ -46,7 +46,7 @@ class Ryaan_Surcharge_Model_Total_Quote extends Mage_Sales_Model_Quote_Address_T
     {
         parent::collect($address);
 		
-        if (($address->getAddressType() == 'billing')) {
+        if ($address->getAddressType() == 'billing') {
             return $this;
         }
 
@@ -65,17 +65,18 @@ class Ryaan_Surcharge_Model_Total_Quote extends Mage_Sales_Model_Quote_Address_T
 
     public function fetch(Mage_Sales_Model_Quote_Address $address)
     {
-        if (($address->getAddressType() == 'billing')) {
+        if ($address->getAddressType() == 'billing') {
+            return $this;
+        }
 
-            $surcharge = $this->helper->getSurcharge($address->getQuote());
+        $surcharge = $this->helper->getSurcharge($address->getQuote());
 
-            if ($surcharge) {
-                $address->addTotal([
-                    'code'  => 'surcharge',
-                    'title' => $this->helper->getLabel(),
-                    'value' => $surcharge
-                ]);
-            }
+        if ($surcharge) {
+            $address->addTotal([
+                'code'  => 'surcharge',
+                'title' => $this->helper->getLabel(),
+                'value' => $surcharge
+            ]);
         }
 
         return $this;
